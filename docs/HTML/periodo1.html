@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Período 1</title>
+  <link rel="stylesheet" href="../CSS/periodo.css" />
+  <script>
+    // Garante que só usuários logados vejam esta página
+    document.addEventListener('DOMContentLoaded', () => {
+      const estaLogado = sessionStorage.getItem('logado') === 'true';
+      if (!estaLogado) {
+        window.location.href = './login.html';
+      }
+    });
+  </script>
+</head>
+<body>
+  <!-- ====== Cabeçalho ====== -->
+  <header>
+    <a href="./index.html" class="logo">Home</a>
+    <a href="./login.html" class="botao">Sair</a>
+  </header>
+
+  <!-- ====== Conteúdo do Período 1 ====== -->
+  <div class="main-content">
+    <h1 style="text-align: center; margin-top: 3rem; color: var(--cor-destaque);">
+      Período 1
+    </h1>
+
+    <!-- Grid de Matérias de P1 -->
+    <div id="grid-materias">
+      <!-- Exemplo: Matéria “Introdução à Psicologia” -->
+      <a href="./materia1.html" class="card-materia">
+        Introdução à Psicologia
+      </a>
+      <!-- Duplicar este <a> para cada disciplina deste período -->
+    </div>
+  </div>
+</body>
+</html>

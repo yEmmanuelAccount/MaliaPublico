@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>V1 – Introdução à Psicologia</title>
+  <link rel="stylesheet" href="../CSS/avaliacao.css" />
+  <script>
+    // Garante que só usuários logados vejam esta página
+    document.addEventListener('DOMContentLoaded', () => {
+      const estaLogado = sessionStorage.getItem('logado') === 'true';
+      if (!estaLogado) {
+        window.location.href = './login.html';
+      }
+    });
+  </script>
+</head>
+<body>
+  <!-- ====== Cabeçalho ====== -->
+  <header>
+    <a href="./materia1.html" class="logo">← Voltar à Matéria</a>
+    <a href="./login.html" class="botao">Sair</a>
+  </header>
+
+  <!-- ====== Conteúdo da Avaliação ====== -->
+  <div class="main-content">
+    <h1 style="text-align: center; margin-top: 3rem; color: var(--cor-destaque);">
+      Avaliação 1 – Introdução à Psicologia
+    </h1>
+
+    <!-- Grid de “pastas”: Conteúdo (PDFs) e Questões (HTML) -->
+    <div id="grid-pastas">
+      <!-- PASTA “Conteúdo” -->
+      <a href="../QUESTOES/aval1_materia1.html" class="card-pasta">
+        Conteúdo
+      </a>
+
+      <!-- PASTA “Questões” -->
+      <a href="../QUESTOES/aval1_materia1.html" class="card-pasta">
+        Questões
+      </a>
+    </div>
+  </div>
+</body>
+</html>
