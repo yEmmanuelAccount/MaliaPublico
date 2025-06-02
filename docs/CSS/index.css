@@ -1,0 +1,98 @@
+@import './variables.css';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--cor-fundo-principal);
+  color: var(--cor-texto-principal);
+  font-family: var(--fonte-principal);
+  min-height: 100vh;
+}
+
+/* ====== Cabeçalho fixo ====== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--cor-secundaria);
+  padding: var(--padding-padrao) 2rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+header a {
+  color: var(--cor-texto-principal);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background-color: var(--cor-botao-fundo);
+  border-radius: var(--border-radius-padrao);
+  transition: background-color 0.2s ease;
+}
+
+header a:hover {
+  background-color: var(--cor-botao-hover);
+}
+
+/* Espaço para que o conteúdo não fique atrás do header */
+.main-content {
+  padding-top: calc(2 * var(--padding-padrao) + 1rem);
+}
+
+/* ====== Mensagem de boas-vindas (usuário não logado) ====== */
+#mensagem-bemvindo {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+/* ====== Grid de Períodos ====== */
+#grid-periodos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--gap-grid);
+  padding: 2rem;
+  justify-items: center;
+}
+
+.card-periodo {
+  background-color: var(--cor-secundaria);
+  width: 200px;
+  height: 150px;
+  border-radius: var(--border-radius-padrao);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--cor-texto-principal);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.card-periodo:hover {
+  transform: translateY(-5px);
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo-principal);
+}
+
+.card-periodo .titulo {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.card-periodo .data-inicio {
+  font-size: 0.85rem;
+  align-self: flex-start;
+}
+
+.card-periodo .data-fim {
+  font-size: 0.85rem;
+  align-self: flex-end;
+}

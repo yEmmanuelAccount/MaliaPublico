@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página Inicial – Questões Faculdade</title>
+  <link rel="stylesheet" href="../CSS/index.css" />
+  <script defer src="../JS/index.js"></script>
+</head>
+<body>
+  <!-- ====== Cabeçalho ====== -->
+  <header>
+    <a href="#" id="btn-registrar">Registrar Conta</a>
+    <a href="#" id="btn-login">Entrar</a>
+  </header>
+
+  <!-- ====== Conteúdo Principal ====== -->
+  <div class="main-content">
+    <!-- Mensagem para quem não está logado -->
+    <div id="mensagem-bemvindo">
+      <h2>Bem-vindo ao Portal de Questões da Faculdade!</h2>
+      <p>
+        Aqui você encontrará todas as questões organizadas por período, disciplina e avaliação.
+        Faça login ou crie sua conta para acessar o conteúdo completo.
+      </p>
+    </div>
+
+    <!-- Grid de Períodos (visível apenas se o usuário estiver logado) -->
+    <div id="grid-periodos">
+      <!-- Exemplo de página de um período (P1) -->
+      <a href="./periodo1.html" class="card-periodo">
+        <div class="data-inicio">Início: 01/2025</div>
+        <div class="titulo">P1</div>
+        <div class="data-fim">Fim: 06/2025</div>
+      </a>
+      <!-- Para outros períodos, basta duplicar este <a> ajustando o href e textos -->
+    </div>
+  </div>
+</body>
+</html>

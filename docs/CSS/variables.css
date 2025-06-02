@@ -1,0 +1,22 @@
+:root {
+  /* Cores primárias */
+  --cor-fundo-principal: #1a1a1a;
+  --cor-texto-principal: #f0f0f0;
+  --cor-destaque: #a06cff;
+  --cor-secundaria: #282828;
+
+  /* Cores de botões e links */
+  --cor-botao-fundo: #333333;
+  --cor-botao-hover: #444444;
+  --cor-botao-texto: #ffffff;
+
+  /* Tipografia */
+  --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Espaçamentos */
+  --padding-padrao: 1rem;
+  --border-radius-padrao: 0.5rem;
+
+  /* Grid */
+  --gap-grid: 1rem;
+}

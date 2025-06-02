@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introdução à Psicologia</title>
+  <link rel="stylesheet" href="../CSS/materia.css" />
+  <script>
+    // Garante que só usuários logados vejam esta página
+    document.addEventListener('DOMContentLoaded', () => {
+      const estaLogado = sessionStorage.getItem('logado') === 'true';
+      if (!estaLogado) {
+        window.location.href = './login.html';
+      }
+    });
+  </script>
+</head>
+<body>
+  <!-- ====== Cabeçalho ====== -->
+  <header>
+    <a href="./periodo1.html" class="logo">← Voltar ao Período 1</a>
+    <a href="./login.html" class="botao">Sair</a>
+  </header>
+
+  <!-- ====== Conteúdo da Matéria ====== -->
+  <div class="main-content">
+    <h1 style="text-align: center; margin-top: 3rem; color: var(--cor-destaque);">
+      Introdução à Psicologia
+    </h1>
+
+    <!-- Grid de Avaliações (V1, V2 etc.) -->
+    <div id="grid-avaliacoes">
+      <!-- Exemplo: Avaliação 1 (V1) -->
+      <a href="./avaliacao1.html" class="card-avaliacao">
+        <div class="data">10/03/2025</div>
+        <div class="texto-v">V1</div>
+      </a>
+      <!-- Duplicar este <a> para cada avaliação desta matéria -->
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+@import './variables.css';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--cor-fundo-principal);
+  color: var(--cor-texto-principal);
+  font-family: var(--fonte-principal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form-container {
+  background-color: var(--cor-secundaria);
+  padding: 2rem;
+  border-radius: var(--border-radius-padrao);
+  width: 320px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.form-container h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-container label {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  background-color: #222;
+  border: 1px solid #333;
+  border-radius: var(--border-radius-padrao);
+  color: var(--cor-texto-principal);
+}
+
+.form-container .btn-registrar {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--cor-botao-fundo);
+  border: none;
+  border-radius: var(--border-radius-padrao);
+  color: var(--cor-botao-texto);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.form-container .btn-registrar:hover {
+  background-color: var(--cor-botao-hover);
+}
+
+#error-msg {
+  color: #e74c3c;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  display: none;
+  text-align: center;
+}

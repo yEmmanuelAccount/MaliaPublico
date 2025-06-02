@@ -1,0 +1,79 @@
+@import './variables.css';
+
+body {
+  background-color: var(--cor-fundo-principal);
+  color: var(--cor-texto-principal);
+  font-family: var(--fonte-principal);
+  margin: 0;
+}
+
+/* Cabeçalho fixo */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--cor-secundaria);
+  padding: var(--padding-padrao) 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header .logo {
+  color: var(--cor-texto-principal);
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+header a.botao {
+  color: var(--cor-texto-principal);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background-color: var(--cor-botao-fundo);
+  border-radius: var(--border-radius-padrao);
+  transition: background-color 0.2s ease;
+}
+
+header a.botao:hover {
+  background-color: var(--cor-botao-hover);
+}
+
+.main-content {
+  padding-top: calc(2 * var(--padding-padrao) + 1rem);
+}
+
+/* Título do Período */
+.main-content h1 {
+  margin-bottom: 2rem;
+}
+
+/* Grid de Matérias */
+#grid-materias {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--gap-grid);
+  padding: 2rem;
+  justify-items: center;
+}
+
+.card-materia {
+  background-color: var(--cor-secundaria);
+  width: 200px;
+  height: 120px;
+  border-radius: var(--border-radius-padrao);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--cor-texto-principal);
+  font-size: 1.25rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.card-materia:hover {
+  transform: translateY(-5px);
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo-principal);
+}

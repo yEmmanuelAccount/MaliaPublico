@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="../CSS/login.css" />
+  <script defer src="../JS/auth.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('form-login');
+      const errorMsg = document.getElementById('error-msg');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nome = document.getElementById('nome').value.trim();
+        const senha = document.getElementById('senha').value;
+
+        if (!nome || !senha) {
+          errorMsg.textContent = 'Preencha todos os campos.';
+          errorMsg.style.display = 'block';
+          return;
+        }
+
+        const resultado = auth.loginUsuario(nome, senha);
+        if (!resultado.sucesso) {
+          errorMsg.textContent = resultado.erro;
+          errorMsg.style.display = 'block';
+          return;
+        }
+        // Se login for bem-sucedido, redireciona para a página inicial
+        window.location.href = './index.html';
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Entrar</h2>
+    <form id="form-login">
+      <label for="nome">Nome de Usuário:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required />
+
+      <div id="error-msg"></div>
+
+      <button type="submit" class="btn-login">Login</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+@import './variables.css';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--cor-fundo-principal);
+  color: var(--cor-texto-principal);
+  font-family: var(--fonte-principal);
+  margin: 0;
+  padding: 2rem;
+}
+
+/* Cabeçalho fixo */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--cor-secundaria);
+  padding: var(--padding-padrao) 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header a {
+  color: var(--cor-texto-principal);
+  text-decoration: none;
+  background-color: var(--cor-botao-fundo);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-padrao);
+}
+
+.main-content {
+  padding-top: calc(2 * var(--padding-padrao) + 1rem);
+}
+
+/* Container principal de Questões */
+#container-questoes {
+  margin-top: 2rem;
+}
+
+/* Cada questão envolvida por uma div */
+.questao {
+  background-color: var(--cor-secundaria);
+  padding: var(--padding-padrao);
+  margin-bottom: 1.5rem;
+  border-radius: var(--border-radius-padrao);
+}
+
+/* Título “Questão XX” */
+.questao h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--cor-destaque);
+}
+
+/* Pergunta (título 2) */
+.questao .pergunta {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Alternativas (título 2 estilizado) */
+.questao .alternativas {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1rem;
+}
+
+/* Estilo dos itens de alternativa */
+.questao .alternativas ul {
+  list-style-type: disc;
+  margin-left: 1.25rem;
+}
+
+.questao .alternativas li {
+  margin-bottom: 0.35rem;
+}
+
+/* Botão “Ver resposta” */
+.questao .btn-ver-resposta {
+  background-color: var(--cor-botao-fundo);
+  color: var(--cor-botao-texto);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-padrao);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.questao .btn-ver-resposta:hover {
+  background-color: var(--cor-botao-hover);
+}
+
+/* Container do Gabarito */
+#gabarito {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--cor-destaque);
+}
+
+/* Cada resposta */
+.resposta {
+  background-color: var(--cor-secundaria);
+  padding: var(--padding-padrao);
+  margin-bottom: 1.5rem;
+  border-radius: var(--border-radius-padrao);
+}
+
+/* Título “Resposta XX” */
+.resposta h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--cor-destaque);
+}
+
+/* Texto da alternativa correta (título 2) */
+.resposta .texto-alternativa {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Botão “Ver questão” */
+.resposta .btn-ver-questao {
+  background-color: var(--cor-botao-fundo);
+  color: var(--cor-botao-texto);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-padrao);
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.resposta .btn-ver-questao:hover {
+  background-color: var(--cor-botao-hover);
+}
