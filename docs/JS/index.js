@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Botões do header
   document.getElementById('btn-registrar').addEventListener('click', () => {
-    window.location.href = './registrar.html';
+    window.location.href = '../docs/HTML/registrar.html';
   });
   document.getElementById('btn-login').addEventListener('click', () => {
-    window.location.href = './login.html';
+    window.location.href = '../docs/HTML/login.html';
   });
 });
